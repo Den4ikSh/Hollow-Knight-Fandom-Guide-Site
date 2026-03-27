@@ -1,0 +1,482 @@
+.lists {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right:10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.list-item {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px;
+    margin-right: 30px;
+    position: relative;
+    top: 270px;
+    left: 370px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.list-item b {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px 5px #000;
+    box-shadow: 5px 5px 5px #000;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.locations,
+.amulets,
+.tovar,
+.keys,
+.different,
+.abilities,
+.spells {
+    display: flex;
+    cursor: pointer;
+}
+
+/* ---- Первый, второй и четвёртый списки ---- */
+.dropdown-first,
+.dropdown-second,
+.dropdown-fourth {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 3px solid #b6b6b6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    min-width: 180px;
+    position: absolute;
+    top: 39px;
+    left: 0px;
+    z-index: 1;
+}
+
+.dropdown-first p,
+.dropdown-second p,
+.dropdown-fourth p {
+    margin: 5px 0;
+    padding: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.dropdown-first a,
+.dropdown-second a,
+.dropdown-fourth a {
+    transition: 0.15s;
+    color: #000;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #fff;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    visibility: visible;
+}
+
+.dropdown-first a:hover,
+.dropdown-second a:hover,
+.dropdown-fourth a:hover {
+    transition: 0.15s;
+    color: #2200ff;
+    background-color: #e7ebff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px #fff;
+    box-shadow: 0px 0px 15px blue;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    visibility: visible;
+}
+
+.list-item:hover .dropdown-first,
+.list-item:hover .dropdown-second,
+.list-item:hover .dropdown-third,
+.list-item:hover .dropdown-fourth {
+    display: block;
+}
+/* ---- Первый, второй и четвёртый списки ---- */
+
+
+
+
+
+/* ---- Подсписки первого списка ---- */
+.dropdown-locations-inf,
+.dropdown-amulets-inf,
+.dropdown-tovar-inf,
+.dropdown-keys-inf,
+.dropdown-different-inf,
+.dropdown-abilities-inf,
+.dropdown-spells-inf {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 3px solid #b6b6b6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    min-width: 205px;
+    top: -3px;
+    left: 180px;
+    z-index: 1;
+}
+
+.dropdown-locations-inf p,
+.dropdown-amulets-inf p,
+.dropdown-tovar-inf p,
+.dropdown-keys-inf p,
+.dropdown-different-inf p,
+.dropdown-abilities-inf p,
+.dropdown-spells-inf p {
+    margin: 5px 0;
+    padding: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.dropdown-locations-inf a,
+.dropdown-amulets-inf a,
+.dropdown-tovar-inf a,
+.dropdown-keys-inf a,
+.dropdown-different-inf a,
+.dropdown-abilities-inf a,
+.dropdown-spells-inf a {
+    color: #000;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #fff;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown-locations-inf a:hover,
+.dropdown-amulets-inf a:hover,
+.dropdown-tovar-inf a:hover,
+.dropdown-keys-inf a:hover,
+.dropdown-different-inf a:hover,
+.dropdown-abilities-inf a:hover,
+.dropdown-spells-inf a:hover {
+    color: #0800ff;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #ff0000;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-locations:hover .dropdown-locations-inf,
+.dp-amulets:hover .dropdown-amulets-inf,
+.dp-tovar:hover .dropdown-tovar-inf,
+.dp-keys:hover .dropdown-keys-inf,
+.dp-different:hover .dropdown-different-inf,
+.dp-abilities:hover .dropdown-abilities-inf,
+.dp-spells:hover .dropdown-spells-inf {
+    display:block;
+}
+
+
+
+/* Сохранение цвета */
+.dp-locations:hover > p > a,
+.dp-amulets:hover > p > a,
+.dp-tovar:hover > p > a,
+.dp-keys:hover > p > a,
+.dp-different:hover > p > a,
+.dp-abilities:hover > p > a,
+.dp-spells:hover > p > a,
+.dropdown-locations-inf:hover ~ .first-dropdown > p > a,
+.dropdown-amulets-inf:hover ~ .first-dropdown > p > a,
+.dropdown-tovar-inf:hover ~ .first-dropdown > p > a,
+.dropdown-keys-inf:hover ~ .first-dropdown > p > a,
+.dropdown-different-inf:hover ~ .first-dropdown > p > a,
+.dropdown-abilities-inf:hover ~ .first-dropdown > p > a,
+.dropdown-spells-inf:hover ~ .first-dropdown > p > a {
+    color: #2200ff;
+    background-color: #e7ebff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px #fff;
+    box-shadow: 0px 0px 15px blue;
+}
+/* */
+
+
+
+
+
+/* ---- Подсписки второго списка ---- */
+.dropdown-bosses-inf,
+.dropdown-dream-warriors-inf,
+.dropdown-dreaming-inf,
+.dropdown-merchants-inf {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 3px solid #b6b6b6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    min-width: 205px;
+    top: -3px;
+    left: 180px;
+    z-index: 1;
+}
+
+.dropdown-bosses-inf p,
+.dropdown-dream-warriors-inf p,
+.dropdown-dreaming-inf p,
+.dropdown-merchants-inf p {
+    margin: 5px 0;
+    padding: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.dropdown-bosses-inf a,
+.dropdown-dream-warriors-inf a,
+.dropdown-dreaming-inf a,
+.dropdown-merchants-inf a {
+    color: #000;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #fff;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown-bosses-inf a:hover,
+.dropdown-dream-warriors-inf a:hover,
+.dropdown-dreaming-inf a:hover,
+.dropdown-merchants-inf a:hover {
+    color: #0800ff;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #ff0000;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-bosses:hover .dropdown-bosses-inf,
+.dp-dream-warriors:hover .dropdown-dream-warriors-inf,
+.dp-dreaming:hover .dropdown-dreaming-inf,
+.dp-merchants:hover .dropdown-merchants-inf {
+    display:block;
+}
+
+
+
+/* Сохранение цвета */
+/* ЗДЕСЬ second-dropdown! НЕ dropdown-second! */
+.dp-bosses:hover > p > a,
+.dp-dream-warriors:hover > p > a,
+.dp-dreaming:hover > p > a,
+.dp-merchants:hover > p > a,
+.dropdown-bosses-inf:hover ~ .second-dropdown > p > a,
+.dropdown-dream-warriors-inf:hover ~ .second-dropdown > p > a,
+.dropdown-dreaming-inf:hover ~ .second-dropdown > p > a,
+.dropdown-merchants-inf:hover ~ .second-dropdown > p > a {
+    color: #2200ff; /* Цвет подсветки */
+    background-color: #e7ebff; /* Цвет фона при подсветке */
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px #fff;
+    box-shadow: 0px 0px 15px blue;
+}
+/* */
+
+
+
+
+
+/* ---- Подсписки четвёртого списка ---- */
+.dropdown-recent-edits-inf,
+.dropdown-other-topics-inf {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 3px solid #b6b6b6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    min-width: 170px;
+    top: -3px;
+    left: -195px;
+    z-index: 1;
+}
+
+.dropdown-recent-edits-inf p,
+.dropdown-other-topics-inf p {
+    margin: 5px 0;
+    padding: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.dropdown-recent-edits-inf a,
+.dropdown-other-topics-inf a {
+    color: #000;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #fff;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown-recent-edits-inf a:hover,
+.dropdown-other-topics-inf a:hover {
+    color: #0800ff;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 #ff0000;
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-recent-edits:hover .dropdown-recent-edits-inf,
+.dp-other-topics:hover .dropdown-other-topics-inf {
+    display:block;
+}
+
+
+
+/* Сохранение цвета */
+/* ЗДЕСЬ fourth-dropdown! НЕ fourth-second! */
+.dp-recent-edits:hover > p > a,
+.dp-other-topics:hover > p > a,
+.dropdown-recent-edits-inf:hover ~ .fourth-dropdown > p > a,
+.dropdown-other-topics-inf:hover ~ .fourth-dropdown > p > a {
+    color: #2200ff; /* Цвет подсветки */
+    background-color: #e7ebff; /* Цвет фона при подсветке */
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px #fff;
+    box-shadow: 0px 0px 15px blue;
+}
+/* */
+
+
+
+
+
+/* Список третий */
+.dropdown-third {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 3px solid #b6b6b6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    min-width: 230px;
+    z-index: 1;
+}
+
+.dropdown-third p {
+    margin: 5px 0;
+    padding: 5px;
+    color: #333;
+    text-align: left;
+}
+
+/* Скрытые грёзы */
+.dp-hidden-dreams a {
+    transition: 0.15s;
+    color: #000000;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #b700ff;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-hidden-dreams a:hover {
+    transition: 0.15s;
+    color: #be45ff;
+    text-decoration: none;
+    background-color: #000;
+    border: 3px solid #500089;
+    border-radius: 5px;
+    padding: 8px;
+    text-shadow: 0px 0px 5px #c800ff;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Труппа Гримма */
+.dp-the-grimm-troupe a {
+    transition: 0.15s;
+    color: #000;
+    text-shadow: 0px 0px 10px red;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-the-grimm-troupe a:hover {
+    transition: 0.15s;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff0000;
+    border: 3px solid #490000;
+    border-radius: 5px;
+    padding: 8px;
+    text-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 15px rgb(78, 0, 0);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Живокровное обновление */
+.dp-life-blood-update a {
+    transition: 0.15s;
+    color: #000;
+    text-shadow: 0px 0px 10px rgb(0, 68, 255);
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-life-blood-update a:hover {
+    transition: 0.15s;
+    color: #fff;
+    text-decoration: none;
+    background-color: #1500ff;
+    border: 3px solid #040049;
+    border-radius: 5px;
+    padding: 8px;
+    text-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 15px rgb(0, 2, 114);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Богоискательница */
+.dp-godmaster a {
+    transition: 0.15s;
+    color: #000;
+    text-shadow: 0px 0px 10px rgb(255, 247, 0);
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dp-godmaster a:hover {
+    transition: 0.15s;
+    color: #fff;
+    text-decoration: none;
+    background-color: #fff200;
+    border: 3px solid #6e6500;
+    border-radius: 5px;
+    padding: 8px;
+    text-shadow: 0px 0px 5px #000000;
+    box-shadow: 0px 0px 15px rgb(114, 110, 0);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* */
